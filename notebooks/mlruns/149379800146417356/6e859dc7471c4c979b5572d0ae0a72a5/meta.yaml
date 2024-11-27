@@ -1,5 +1,5 @@
 artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/6e859dc7471c4c979b5572d0ae0a72a5/artifacts
-end_time: null
+end_time: 1732716926353
 entry_point_name: ''
 experiment_id: '149379800146417356'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1732715903705
-status: 1
+status: 3
 tags: []
 user_id: xiomi
