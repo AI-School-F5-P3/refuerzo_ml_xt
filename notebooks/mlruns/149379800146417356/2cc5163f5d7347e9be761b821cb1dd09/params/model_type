@@ -1,0 +1,1 @@
+Model SVC(C=0.5, degree=1, gamma=0.01, kernel='poly')

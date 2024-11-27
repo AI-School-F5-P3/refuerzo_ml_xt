@@ -1,0 +1,15 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/db46705e2ec7411087d706af77aebe99/artifacts
+end_time: 1732711786483
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: active
+run_id: db46705e2ec7411087d706af77aebe99
+run_name: Test RFC
+run_uuid: db46705e2ec7411087d706af77aebe99
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732711417074
+status: 3
+tags: []
+user_id: xiomi

@@ -1,0 +1,17 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/dd699893104a49779abba16f8a80c4e7/artifacts
+end_time: 1732714089260
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: active
+run_id: dd699893104a49779abba16f8a80c4e7
+run_name: "Test GridSearchCV(cv=5, estimator=SVC(random_state=42),\n             param_grid={'C':
+  [0.1, 1, 10, 100],\n                         'gamma': ['scale', 'auto', 0.01, 0.1,
+  1],\n                         'kernel': ['linear', 'rbf', 'poly']})-2"
+run_uuid: dd699893104a49779abba16f8a80c4e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732714021564
+status: 3
+tags: []
+user_id: xiomi

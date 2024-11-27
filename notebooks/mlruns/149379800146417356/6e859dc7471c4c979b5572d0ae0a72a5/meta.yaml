@@ -1,0 +1,15 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/6e859dc7471c4c979b5572d0ae0a72a5/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: active
+run_id: 6e859dc7471c4c979b5572d0ae0a72a5
+run_name: Test svm 7 features-4
+run_uuid: 6e859dc7471c4c979b5572d0ae0a72a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732715903705
+status: 1
+tags: []
+user_id: xiomi

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/eb31a601744c4c5e87c0c4cd53930f31/artifacts
+end_time: 1732715137376
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: active
+run_id: eb31a601744c4c5e87c0c4cd53930f31
+run_name: Test svm-3
+run_uuid: eb31a601744c4c5e87c0c4cd53930f31
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732714752317
+status: 3
+tags: []
+user_id: xiomi
