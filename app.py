@@ -1,4 +1,11 @@
 import streamlit as st
+import joblib
+import pandas as pd
+
+def load_model_ml(path):
+    with open(path, 'rb') as file:
+        model = joblib.load(file)
+    return model
 
 st.title("Proyecto de Refuerzo")
 
@@ -8,16 +15,31 @@ option = st.sidebar.selectbox(
 )
 
 if option == "Modelo ML":
+    marital_map = {
+        "Soltero": 0,
+        "Casado": 1
+    }
+
     st.header("Modelo ML - SVM")
     col1, col2 = st.columns(2)
-    
-    age = col1.number_input("Edad:", 0, 120)
+    marital = col1.selectbox("Estado civil:", tuple(marital_map.keys()))
     ed = col1.selectbox("Nivel de educación:", [1, 2, 3, 4, 5])
-    region = col1. selectbox("Región:", [1, 2, 3])
+    reside = col1. slider("Habitantes por casa:", 1, 10)
     tenure = col2.number_input("Tiempo trabajando (meses):", 0, 120)
     income = col2.number_input("Ingresos:", 0, 2000)
     address = col2.slider("Dirección:", 0, 55)
     employ = col2.slider("Tipo de trabajo:", 0, 47)
 
-    btn = st.button("Predecir")
-
+    if st.button("Predecir"):
+        input_data = pd.DataFrame({
+            'ed': [ed],
+            'tenure': [tenure],
+            'employ': [employ],
+            'reside': [reside],
+            'income': [income],
+            'marital': [marital_map[marital]],
+            'address': [address]
+        })
+        model = load_model_ml('models/model_svc_7f.joblib')
+        pred = model.predict(input_data)
+        st.success(f"{pred}")
