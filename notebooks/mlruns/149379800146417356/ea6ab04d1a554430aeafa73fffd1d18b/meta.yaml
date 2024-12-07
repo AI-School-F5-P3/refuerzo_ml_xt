@@ -1,8 +1,9 @@
 artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/ea6ab04d1a554430aeafa73fffd1d18b/artifacts
+deleted_time: 1733133454677
 end_time: 1732708495903
 entry_point_name: ''
 experiment_id: '149379800146417356'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ea6ab04d1a554430aeafa73fffd1d18b
 run_name: Test SVM
 run_uuid: ea6ab04d1a554430aeafa73fffd1d18b

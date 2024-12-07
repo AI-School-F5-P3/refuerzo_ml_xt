@@ -1,0 +1,15 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/482727af87894a8ebd2f7025080fd86f/artifacts
+end_time: 1732796135940
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: active
+run_id: 482727af87894a8ebd2f7025080fd86f
+run_name: Test for_features_importances-2
+run_uuid: 482727af87894a8ebd2f7025080fd86f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732796135507
+status: 3
+tags: []
+user_id: xiomi

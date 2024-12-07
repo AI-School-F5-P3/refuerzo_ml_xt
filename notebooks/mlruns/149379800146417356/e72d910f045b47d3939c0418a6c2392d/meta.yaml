@@ -1,0 +1,16 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/e72d910f045b47d3939c0418a6c2392d/artifacts
+deleted_time: 1733148234000
+end_time: 1733148198832
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: deleted
+run_id: e72d910f045b47d3939c0418a6c2392d
+run_name: xgboost-1
+run_uuid: e72d910f045b47d3939c0418a6c2392d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733148121728
+status: 4
+tags: []
+user_id: xiomi

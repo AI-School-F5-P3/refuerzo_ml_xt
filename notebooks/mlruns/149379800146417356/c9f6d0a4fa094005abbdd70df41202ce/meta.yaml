@@ -1,0 +1,16 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/c9f6d0a4fa094005abbdd70df41202ce/artifacts
+deleted_time: 1732796884258
+end_time: 1732796872009
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: deleted
+run_id: c9f6d0a4fa094005abbdd70df41202ce
+run_name: Test RFC_features_importances-2
+run_uuid: c9f6d0a4fa094005abbdd70df41202ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732796867227
+status: 4
+tags: []
+user_id: xiomi

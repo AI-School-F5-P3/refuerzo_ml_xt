@@ -1,0 +1,16 @@
+artifact_uri: file:///home/xiomi/Desktop/F5IA/Projects/Project_12_05/notebooks/mlruns/149379800146417356/2fca85b243fd4b73bfee5c6df9d47ec2/artifacts
+deleted_time: 1733147845782
+end_time: null
+entry_point_name: ''
+experiment_id: '149379800146417356'
+lifecycle_stage: deleted
+run_id: 2fca85b243fd4b73bfee5c6df9d47ec2
+run_name: svm 7 features-4
+run_uuid: 2fca85b243fd4b73bfee5c6df9d47ec2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733139661917
+status: 1
+tags: []
+user_id: xiomi
