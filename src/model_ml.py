@@ -1,34 +1,47 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn import svm
+from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.pipeline import Pipeline
+import joblib
 
 data = pd.read_csv("../data/clean_file.csv")
 
-def split_data(data: pd.DataFrame):
-
-    X = data.drop("custcat", axis=1)
+def split_data_7f(data: pd.DataFrame):
+    X = data[["ed", "tenure", "employ", "reside", "income", "marital", "address"]]
     y = data["custcat"]
-
     return train_test_split(X, y, test_size=0.2, random_state=42)
 
+def create_pipeline():
+    pipeline = Pipeline([
+        ('preprocessor', StandardScaler()),
+        ('classifier', SVC(C=1, 
+                           class_weight='balanced', 
+                           kernel='linear', 
+                           gamma='scale', 
+                           random_state=42))
+        ])
+    return pipeline
 
-def processing_data(X_train, X_test):
-    # Estandarizar
-    scaler = StandardScaler()
-    X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
-
-def get_models():
-    models = {
-        "SVC": svm.SVC(**{'C': 0.5, 'degree': 1, 'gamma': 0.01, 'kernel': 'poly'}),
-        "random_foresst": RandomForestClassifier()
-    }
+def save_model(model, filename):
+    joblib.dump(model, filename)
+    print("Modelo guardado: ", filename)
 
 def train_model():
-    X_train, X_test, y_train, y_test = split_data(data)
-    
+    X_train, X_test, y_train, y_test = split_data_7f(data)
+    model = create_pipeline()
+    model.fit(X_train, y_train)
+    #predict
+    y_pred = model.predict(X_test)
+    #metrics
+    train_accuracy = accuracy_score(y_train, model.predict(X_train))
+    test_accuracy = accuracy_score(y_test, y_pred)
+    print("Accuracy:", test_accuracy)
+    print("Classification report:\n", classification_report(y_test, y_pred))
+    print("Overfitting:", train_accuracy - test_accuracy)
+    save_model(model, "../models/model_svc_7f.joblib")
+
+if __name__ == '__main__':
+    train_model()
 
