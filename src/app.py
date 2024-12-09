@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
+from db import add_data
 
 def load_model_ml(path):
     with open(path, 'rb') as file:
@@ -29,9 +30,8 @@ if option == "Modelo ML":
     income = col2.number_input("Ingresos:", 0, 2000)
     address = col2.slider("Dirección:", 0, 55)
     employ = col2.slider("Tipo de trabajo:", 0, 47)
-
-    if st.button("Predecir"):
-        input_data = pd.DataFrame({
+    
+    data = {
             'ed': [ed],
             'tenure': [tenure],
             'employ': [employ],
@@ -39,7 +39,14 @@ if option == "Modelo ML":
             'income': [income],
             'marital': [marital_map[marital]],
             'address': [address]
-        })
+        }
+    if st.button("Predecir"):
+        input_data = pd.DataFrame(data)
         model = load_model_ml('../models/model_svc_7f.joblib')
-        pred = model.predict(input_data)
+        pred = model.predict(input_data)[0]
         st.success(f"{pred}")
+        query = add_data(data, int(pred))
+        if query == 1:
+            st.success("Datos guardados correctamente.")
+        else:
+            st.text(query)
