@@ -42,7 +42,7 @@ if option == "Modelo ML":
         }
     if st.button("Predecir"):
         input_data = pd.DataFrame(data)
-        model = load_model_ml('../models/model_svc_7f.joblib')
+        model = load_model_ml('models/model_svc_7f.joblib')
         pred = model.predict(input_data)[0]
         st.success(f"{pred}")
         query = add_data(data, int(pred))
