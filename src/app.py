@@ -15,7 +15,38 @@ option = st.sidebar.selectbox(
     ("Inicio", "Modelo ML", "Modelo DL")
 )
 
-if option == "Modelo ML":
+def project_description():
+    st.title("🛰️ Segmentación de Clientes para Telecomunicaciones")
+    
+    st.markdown("""
+    ### Objetivo del Proyecto
+    Desarrollar un sistema de clasificación avanzado para personalizar ofertas 
+    en el sector de telecomunicaciones utilizando técnicas de machine learning.
+
+    ### Modelos Utilizados
+    - **Máquina de Vectores de Soporte (SVC)**
+    - **Red Neuronal**
+
+    ### Características Clave
+    - Análisis predictivo de comportamiento de clientes
+    - Personalización de ofertas basada en segmentación
+    - Mejora de estrategias de retención y marketing
+    """)
+
+    # Visualización conceptual
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader("Proceso de Clasificación")
+        st.image("https://via.placeholder.com/400x300.png?text=Diagrama+de+Flujo+de+Clasificación")
+    
+    with col2:
+        st.subheader("Impacto Esperado")
+        st.metric(label="Precisión Estimada", value="44%")
+        # st.metric(label="Reducción de Churn", value="20%")
+
+if option == 'Inicio':
+    project_description()
+elif option == "Modelo ML":
     marital_map = {
         "Soltero": 0,
         "Casado": 1
